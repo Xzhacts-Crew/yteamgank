@@ -6,3 +6,77 @@
 * Munif Aryaputra - 22.83.0787
 * Krisna Yogi Saputra - 22.83.0795
 * Arizka Wahyu Satria Anggara - 22.83.0802
+## Layanan yang disediakan
+* IP: 192.168.56.112
+* URL : web.bayernmunichfanclub.site
+* Terinstal Web Server (CMS WordPress).
+* Layanan dilindungi oleh UFW dan WAF untuk meningkatkan keamanan.
+* Monitoring Web Traffic menggunakan Cloudflare .
+* Penggunaan SSL Certificate pada layanan HTTP/Apache2 untuk mengamankan setiap halaman web. 
+* Penggunaan Domain pada layanan web untuk memastikan bahwa tidak ada dua situs web yang memiliki alamat domain yang sama.
+* Melakukukan pengecekan saat mengakses web
+## Secure Apache dengan Let's Encrypt
+Kita menggunakan Cerbot untuk mengotomatisasi pemasangan, pembaruan, dan manajemen sertifikat SSL/TLS dari Let's Encrypt.
+* > Installing Certbot
+* > sudo apt install certbot python3-certbot-apache
+* > Check Konfigurasi Apache Virtual Host
+* > sudo nano /etc/apache2/sites-available/your_domain.conf
+* > sudo apache2ctl configtest
+* > sudo systemctl reload apache2
+* > sudo ufw status
+* > sudo ufw allow 'Apache Full'
+* > sudo ufw delete allow 'Apache'
+* > sudo ufw status
+* > sudo certbot --apache
+* > sudo systemctl status certbot.timer
+## Installation Ubuntu Server
+Pengertian install web server dengan Ubuntu" secara umum merujuk pada proses menginstal perangkat lunak server web di sistem operasi Ubuntu. Web server adalah perangkat lunak yang bertanggung jawab untuk menangani permintaan HTTP dari klien (seperti browser web) dan mengirimkan halaman web yang diminta ke klien tersebut. Ubuntu adalah sistem operasi berbasis Linux yang sering digunakan sebagai platform server.
+## Create Web Server
+Web server adalah perangkat keras atau perangkat lunak yang menyediakan layanan hosting untuk situs web atau aplikasi web. Perangkat keras web server dapat berupa komputer fisik atau server yang diakses melalui internet, sementara perangkat lunak web server adalah aplikasi yang berjalan di server untuk menangani permintaan HTTP (Hypertext Transfer Protocol) dari klien, seperti browser web, dan memberikan respons dengan mengirimkan halaman web yang diminta.
+## Installation Apache2
+Instalasi Apache2 pada Ubuntu adalah langkah-langkah untuk menginstal server web Apache versi 2, yang merupakan salah satu server web open source yang paling populer dan banyak digunakan di dunia. Apache2 umumnya digunakan untuk menjalankan situs web statis dan dinamis.
+## Installation SSH Server
+SSH (Secure Shell) adalah protokol jaringan yang memungkinkan pertukaran data yang aman melalui saluran terenkripsi antara dua perangkat. Selain itu, "SSH Server" merujuk pada perangkat lunak server yang mendukung protokol SSH dan memungkinkan akses aman dari jarak jauh ke sistem atau mesin tersebut.
+## Installation PHP
+Instalasi PHP pada Ubuntu melibatkan langkah-langkah untuk menginstal interpreter PHP dan modul-modul pendukungnya, sehingga Anda dapat menjalankan skrip PHP di server web seperti Apache. PHP adalah bahasa pemrograman server-side yang sering digunakan untuk mengembangkan situs web dinamis.
+## Database Mariadb
+MariaDB adalah sistem manajemen basis data (Database Management System - DBMS) yang bersifat open source, berkembang sebagai cabang dari proyek MySQL. MariaDB dirancang sebagai pengganti MySQL setelah akuisisi MySQL oleh Oracle Corporation pada tahun 2009. MariaDB dikembangkan oleh komunitas open source dan dikembangkan secara independen dari MySQL
+## Installation Mysql Secure
+MySQL Secure dapat merujuk pada beberapa hal, tergantung pada konteksnya. Secara umum, ini bisa merujuk pada tindakan atau proses untuk mengamankan instalasi MySQL database server, yang melibatkan mengatur konfigurasi, hak akses, dan mengimplementasikan praktik keamanan terbaik untuk melindungi data dan server.
+## CMS Wordpress
+WordPress adalah CMS (Content Management System) yang populer dan open-source. CMS adalah perangkat lunak yang memungkinkan pengguna untuk membuat, mengelola, dan memperbarui konten pada situs web tanpa perlu memiliki pengetahuan mendalam tentang pengembangan web atau pemrograman. WordPress secara khusus dikembangkan untuk menyederhanakan proses pembuatan dan pemeliharaan situs web.
+Untuk Langkah - langkah dapat di cek melalui link : https://ubuntu-com.translate.goog/tutorials/install-and-configure-wordpress?_x_tr_sl=en&_x_tr_tl=id&_x_tr_hl=id&_x_tr_pto=tchttps://ubuntu-com.translate.goog/tutorials/install-and-configure-wordpress?_x_tr_sl=en&_x_tr_tl=id&_x_tr_hl=id&_x_tr_pto=tc#1-overview
+## Membuat Web server tentang berita ter update klub Bayern Munich
+Link : https://web.bayernmunichfanclub.site/  (tapi tidak bisa diakses ke public dikarenakan belum di hosting)
+## Pasang Domain
+Untuk Domain berlangganan di NiagaHoster 
+Link : https://www.niagahoster.co.id/
+### Untuk Domain dapat didapatkan di link : https://ubuntu-com.translate.goog/tutorials/install-and-configure-wordpress?_x_tr_sl=en&_x_tr_tl=id&_x_tr_hl=id&_x_tr_pto=tchttps://ubuntu-com.translate.goog/tutorials/install-and-configure-wordpress?_x_tr_sl=en&_x_tr_tl=id&_x_tr_hl=id&_x_tr_pto=tc#1-overview
+## Memasang SSL 
+![image](https://github.com/nomercyplease/FINAL_PROJECT__WEB_SERVER_KULIAH/assets/145346772/330b5742-0db2-4372-adb0-c9baf9dc2e35)
+
+## Menginstall Cloudflare di Ubuntu
+## Membuat tunnels di cloudflare 
+Cloudflare Tunneling merujuk pada layanan yang disediakan oleh Cloudflare untuk menyediakan konektivitas yang aman dan andal antara server web atau aplikasi dan jaringan Cloudflare. Fitur ini dikenal dengan nama "Argo Tunnel".
+link : https://somnathr.com/blog/install_cloudflared/
+## Menambah antisipasi serangan DDoS 
+![image](https://github.com/nomercyplease/FINAL_PROJECT__WEB_SERVER_KULIAH/assets/145346772/125c9627-36b4-4fc1-9efd-6f66b1db8715)
+
+## Menambah di config.php file jika asset tidak terupload secara sempurna
+define ('WP_HOME','domainmu.com');
+define ('WP_SITEURL','domainmu.com');
+
+### Tampilan Web 
+Untuk tampilan home berisi berita - berita ter update
+![image](https://github.com/nomercyplease/FINAL_PROJECT__WEB_SERVER_KULIAH/assets/145346772/75fa1219-2fb2-49ce-bcda-6309a5c29d25)
+Untuk tampilan List Players berisi pemain - pemain yang ada di klub
+![image](https://github.com/nomercyplease/FINAL_PROJECT__WEB_SERVER_KULIAH/assets/145346772/42809307-750b-49a8-bab1-9e306245fd4c)
+Untuk tampilan fixture berisi match yang pernah atau akan ada
+![image](https://github.com/nomercyplease/FINAL_PROJECT__WEB_SERVER_KULIAH/assets/145346772/70bccfb2-98e4-4be3-b56d-bfea0a36051c)
+
+### Memberikan WAF Rule di Cloudflare untuk mencegah terkena hack
+![image](https://github.com/nomercyplease/FINAL_PROJECT__WEB_SERVER_KULIAH/assets/145346772/febd7bf1-fc5b-4bb8-83fe-3750a04d1231)
+Web akan ter blocking jika di akses
+![image](https://github.com/nomercyplease/FINAL_PROJECT__WEB_SERVER_KULIAH/assets/145346772/e77c32ec-b61f-4b7b-b4a8-aee2f3d6ee4e)
+
+
